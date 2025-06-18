@@ -5,15 +5,15 @@ import bend from "../../assets/bend.jpg"
 
 const AboutUs = () => {
   return (
-    <section className="bg-white py-28">
+    <section className="bg-white py-8 lg:py-28">
       {/* Section Title */}
-      <div className="text-center mb-16">
-        <h2 className="text-sm font-semibold text-gray-600 mb-2">WHO WE ARE</h2>
-        <h1 className="text-3xl font-bold text-gray-900">About Us</h1>
+      <div className="text-center mb-6 lg:mb-16">
+        <h2 className="text-[10px] lg:text-sm font-semibold text-gray-600 mb-1 lg:mb-2">WHO WE ARE</h2>
+        <h1 className="text-2xl lg:text-3xl font-bold text-gray-900">About Us</h1>
       </div>
 
       {/* Content Layout */}
-      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-35 lg:gap-8">
         {/* Image Cards */}
         <div className="md:col-span-1">
           <div className="flex flex-col space-y-4">
@@ -39,13 +39,13 @@ const AboutUs = () => {
           <div className="space-y-4">
             {/* Subheading */}
             <div className="flex items-center gap-2">
-              <h3 className="text-xl font-bold text-gray-900">WHO WE ARE</h3>
+              <h3 className="text-sm lg:text-xl font-bold text-gray-900">WHO WE ARE</h3>
               <span className="w-16 h-[2.5px] bg-linear-to-r from-sky-500  to-cyan-400 rounded"></span>
             </div>
 
             {/* Paragraphs */}
-            <p className="text-gray-700 leading-relaxed">
-               <strong className="text-[#1A4B7B]">M/s Mangrish</strong>, Bangalore, established in the year 2007–2008, have
+            <p className="text-gray-700 text-[12px] lg:text-[16px] leading-relaxed">
+               <strong className="text-[#1A4B7B] ">M/s Mangrish</strong>, Bangalore, established in the year 2007–2008, have
               been pioneers in introducing and distributing in South India
               innovative products like DWC HDPE pipes etc. used in the
               infrastructure and construction industry. All the products are technically
@@ -53,12 +53,12 @@ const AboutUs = () => {
               having very long life.
             </p>
 
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 text-[12px] lg:text-[16px] leading-relaxed">
               Within a short span, we have established ourselves as a reliable
               and trustworthy supplier of materials to a number of leading
               organizations, both governmental and private.
             </p>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 text-[12px] lg:text-[16px] leading-relaxed">
               We are glad to inform you that we are Distributors for <strong className="text-[#000]">M/s Prince
               Pipes and Fittings Limited</strong>, Mumbai. <strong className="text-[#000]">M/s Prince
               Pipes and Fittings Limited</strong> are one amongst the leading manufacturers of pipes and

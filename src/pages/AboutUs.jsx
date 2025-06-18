@@ -8,7 +8,7 @@ const steps = [{ label: "Home", href: "/" }, { label: "About Us" }];
 const AboutUs = () => {
   return (
     <Layout activeMenu="About Us">
-      <div className="container mx-auto py-10">
+      <div className="container mx-auto px-4 py-5 lg:py-10">
         <PageHeader steps={steps} pageTitle="About Us" infoText="" />
         <section className="bg-white py-10">
           {/* Content Layout */}

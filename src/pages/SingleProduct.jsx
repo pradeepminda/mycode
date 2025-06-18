@@ -55,19 +55,23 @@ const steps = [
 //     },
 //   ],
 // };
-const productData1 =Cat_1_Products?.[0];
+const productData1 = Cat_1_Products?.[0];
 function SingleProduct() {
   const [activeTab, setActiveTab] = React.useState("overView");
   const [productData, setProductData] = useState(null); // Initialize as null
   const location = useLocation();
   const navigate = useNavigate();
+  const [selectedImage, setSelectedImage] = useState(0);
 
   useEffect(() => {
-    console.log("location.state?.productDetails", location.state?.productDetails);
-    
+    console.log(
+      "location.state?.productDetails",
+      location.state?.productDetails
+    );
+
     if (location.state?.productDetails) {
       setProductData(location.state?.productDetails);
-    } 
+    }
   }, [location?.state]);
 
   if (!productData) {
@@ -76,14 +80,16 @@ function SingleProduct() {
 
   return (
     <Layout>
-        {/* <div>{productData}</div> */}
+      {/* <div>{productData}</div> */}
       <div className="container mx-auto px-4 py-4">
-        <Breadcrumb steps={[...steps,{label:productData?.name}]} />
-        <h1 className="text-2xl font-bold text-gray-900">{productData?.name}</h1>
+        <Breadcrumb steps={[...steps, { label: productData?.name }]} />
+        <h1 className="text-2xl font-bold text-gray-900">
+          {productData?.name}
+        </h1>
 
         <div className="flex flex-col lg:flex-row gap-8 mt-6">
           {/* Left Column - Product Images */}
-          <div className="lg:w-2/5">
+          {/* <div className="lg:w-2/5">
             <div className="bg-white rounded-lg overflow-hidden mb-4 border border-gray-200">
               <img
                 src={productData?.imgUrl[0]}
@@ -96,6 +102,34 @@ function SingleProduct() {
                 <div
                   key={index}
                   className="bg-gray-100 rounded-md overflow-hidden cursor-pointer hover:ring-2 hover:ring-blue-500 transition-all border border-gray-200"
+                >
+                  <img
+                    src={img}
+                    alt={`${productData?.name} ${index + 1}`}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          </div> */}
+          <div className="lg:w-2/5">
+            <div className="bg-white rounded-lg overflow-hidden mb-4 border border-gray-200">
+              <img
+                src={productData?.imgUrl[selectedImage]}
+                alt={productData?.name}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              {productData?.imgUrl?.map((img, index) => (
+                <div
+                  key={index}
+                  className={`bg-gray-100 rounded-md overflow-hidden cursor-pointer hover:ring-2 hover:ring-blue-500 transition-all border ${
+                    selectedImage === index
+                      ? "ring-2 ring-blue-500"
+                      : "border-gray-200"
+                  }`}
+                  onClick={() => setSelectedImage(index)}
                 >
                   <img
                     src={img}
@@ -122,7 +156,10 @@ function SingleProduct() {
 
             {/* Enquiry Button */}
             <div className="mt-2">
-              <button onClick={()=>navigate(`/contact-us`)} className="w-full lg:w-auto bg-black hover:bg-white-700 text-white font-bold font-medium py-2 px-4 rounded-lg transition-colors">
+              <button
+                onClick={() => navigate(`/contact-us`)}
+                className="w-full lg:w-auto bg-black hover:bg-white-700 text-white font-bold font-medium py-2 px-4 rounded-lg transition-colors"
+              >
                 ENQUIRY
               </button>
             </div>

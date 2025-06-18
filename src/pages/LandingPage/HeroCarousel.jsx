@@ -229,7 +229,7 @@ const HeroCarousel = () => {
   );
 
   return (
-    <div className="relative w-full h-[calc(100vh-70px)] overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="relative w-full h-[calc(100vh-70px)] overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50 pt-35 sm:pt-1">
       {/* Main carousel container */}
       <div
         ref={carouselRef}
@@ -257,7 +257,7 @@ const HeroCarousel = () => {
               <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />
 
               <div className="relative z-10 container mx-auto px-6 h-full flex items-center">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-12 w-full items-center">
                   {/* Content */}
                   <div
                     className={`space-y-8 transition-all duration-1000 ${
@@ -267,7 +267,7 @@ const HeroCarousel = () => {
                     }`}
                   >
                     <div className="mb-4">
-                      <h1 className="text-4xl lg:text-4xl font-semibold text-[#1A4B7B] leading-tight">
+                      <h1 className="text-[14px] lg:text-4xl font-semibold text-[#1A4B7B] leading-tight">
                         {slide.title.split(" ").map((word, wordIndex) => (
                           <span
                             key={wordIndex}
@@ -285,7 +285,7 @@ const HeroCarousel = () => {
                         ))}
                       </h1>
 
-                      <p className="text-lg lg:text-base text-[#1A4B7B] leading-relaxed max-w-2xl mt-3">
+                      <p className="text-[12px] lg:text-base text-[#1A4B7B] leading-relaxed max-w-2xl mt-3">
                         {slide.description}
                       </p>
                     </div>
@@ -293,7 +293,7 @@ const HeroCarousel = () => {
                     <div className="flex items-center ">
                       <button onClick={()=>{
                         navigate('/products',{})
-                      }} className="bg-black text-white px-8 py-2.5 rounded-md font-medium text-base hover:bg-slate-800 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl">
+                      }} className="bg-black text-white px-3 sm:px-8 py-1 sm:py-2.5 rounded-[20px] font-medium text-[12px] hover:bg-slate-800 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl">
                         Know More
                       </button>
 
@@ -313,7 +313,7 @@ const HeroCarousel = () => {
                         ? "opacity-100 translate-x-0"
                         : "opacity-60 translate-x-8"
                     }`}>
-                    <img src={slide.image}  alt="" className="relative h-96 lg:h-[85vh]" />
+                    <img src={slide.image}  alt="" className="relative w-full h-95 lg:h-[85vh]" />
                   </div>
                 </div>
               </div>
@@ -325,14 +325,14 @@ const HeroCarousel = () => {
       {/* Navigation */}
       <button
         onClick={prevSlide}
-        className="absolute left-6 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-800 p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-20 group backdrop-blur-sm"
+        className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-800 p-1 sm:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-20 group backdrop-blur-sm"
       >
         <LuChevronLeft className="w-6 h-6 group-hover:scale-110 transition-transform" />
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-6 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-800 p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-20 group backdrop-blur-sm"
+        className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-800 p-1 sm:p-4 r rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-20 group backdrop-blur-sm"
       >
         <LuChevronRight className="w-6 h-6 group-hover:scale-110 transition-transform" />
       </button>

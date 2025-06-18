@@ -19,7 +19,11 @@ function Footer() {
             {/* Logo */}
             <div className="flex-shrink-0">
               <div className="bg-white-600 text-white px-3 py-2 rounded font-bold text-lg">
-                <img src={company_logo} alt="logo" className="h-[24px] md:h-[44px]" />
+                <img
+                  src={company_logo}
+                  alt="logo"
+                  className="h-[24px] md:h-[44px]"
+                />
               </div>
             </div>
 
@@ -34,6 +38,14 @@ function Footer() {
                   {item.name}
                 </a>
               ))}
+            </nav>
+            <nav className="flex md:hidden items-center space-x-8">
+              <a
+                href={"/termsAndConditions"}
+                className="text-gray-700 hover:text-blue-600 font-medium text-sm transition-colors duration-200"
+              >
+                {"Terms & Conditions"}
+              </a>
             </nav>
 
             {/* Social Media Icons */}

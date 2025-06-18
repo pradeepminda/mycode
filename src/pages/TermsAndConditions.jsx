@@ -9,7 +9,7 @@ import { LuCircleArrowRight } from "react-icons/lu";
 function TermsAndConditions() {
   return (
     <Layout activeMenu="TermsAndCondtions">
-      <div className="container mx-auto py-10">
+      <div className="container mx-auto px-4 py-5 lg:py-10">
         <PageHeader steps={steps} pageTitle="Terms & conditions" infoText="" />
         <div className="flex items-center gap-2 py-5">
           <h3 className="text-xl font-bold text-gray-900">
@@ -20,8 +20,8 @@ function TermsAndConditions() {
 
         <div className="space-y-3 ">
           {[
-            { id: "transportationExtra", label: "Transportation Extra" },
-            { id: "transporterChoice", label: "Transporter of your choice" },
+            // { id: "transportationExtra", label: "Transportation Extra" },
+            // { id: "transporterChoice", label: "Transporter of your choice" },
             {
               id: "paymentMode",
               label: "Mode of Payment : RTGS / NEFT | UPI | Cash",
