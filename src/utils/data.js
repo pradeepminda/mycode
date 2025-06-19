@@ -1018,3 +1018,679 @@ export const categories = [
   },
   { id: "cat-5", name: "WATER STORAGE", count: 2, products: Cat_5_product },
 ];
+
+export const AllProducts = [
+  // PLUMBING & INDUSTRIAL
+  {
+    slug: "flowguard-plus-cpvc",
+    name: "FlowGuard Plus CPVC Plumbing Systems",
+    description: "India's first GRIHA-certified CPVC system with 50-year service life. Handles temperatures up to 93°C for hot/cold water with low bacterial growth.",
+    imgUrl: [],
+    tableData: [
+      {
+        size: "15-250mm (½-10\")",
+        class: "SDR 11/13.5, SCH 40/80",
+        standard: "IS:15778, ASTM D 2846",
+        endConnection: "Solvent Cement"
+      }
+    ],
+    productSpec: [
+      {
+        key: "FEATURES",
+        value: [
+          "25% higher pressure capacity",
+          "Fire retardant",
+          "UV resistant",
+          "Lead-free"
+        ]
+      },
+      {
+        key: "APPLICATIONS",
+        value: [
+          "Residential plumbing",
+          "Commercial hot water lines",
+          "Terrace looping"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "easyfit-upvc",
+    name: "Easyfit UPVC Plumbing Systems",
+    description: "Lead-free UPVC piping system for safe drinking water transportation with self-extinguishing properties.",
+    imgUrl: [],
+    tableData: [
+      {
+        size: "15-250mm (½-10\")",
+        class: "SCH 40/80",
+        standard: "ASTM D 1785",
+        endConnection: "Solvent Cement"
+      }
+    ],
+    productSpec: [
+      {
+        key: "FEATURES",
+        value: [
+          "5-60°C temperature range",
+          "Corrosion resistant",
+          "Easy installation",
+          "ISI marked"
+        ]
+      },
+      {
+        key: "APPLICATIONS",
+        value: [
+          "RO water plants",
+          "Swimming pools",
+          "Industrial water lines"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "greenfit-ppr",
+    name: "Greenfit PP-R Plumbing Systems",
+    description: "PP-R pipes for extreme temperatures (-20°C to 95°C) with antimicrobial inner layer for drinking water safety.",
+    imgUrl: [],
+    tableData: [
+      {
+        size: "20-315mm",
+        class: "PN10/16/20",
+        standard: "IS:15801, DIN 8077",
+        endConnection: "Fusion Welding"
+      }
+    ],
+    productSpec: [
+      {
+        key: "FEATURES",
+        value: [
+          "Triple-layer UV protection",
+          "Chemical resistant",
+          "Low thermal expansion",
+          "50-year lifespan"
+        ]
+      },
+      {
+        key: "APPLICATIONS",
+        value: [
+          "Solar heating systems",
+          "Pharmaceutical plants",
+          "Commercial hot water"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "blue-greenfit",
+    name: "Blue Greenfit PP-R Industrial Piping",
+    description: "Blue-colored PP-R systems specifically designed for compressed air, vacuum and nitrogen applications.",
+    imgUrl: [],
+    tableData: [
+      {
+        size: "20-315mm",
+        class: "PN10/16/20",
+        standard: "IS:15801",
+        endConnection: "Fusion Welding"
+      }
+    ],
+    productSpec: [
+      {
+        key: "FEATURES",
+        value: [
+          "Moisture-resistant",
+          "Smooth inner surface",
+          "Leak-proof joints",
+          "Low conductivity"
+        ]
+      },
+      {
+        key: "APPLICATIONS",
+        value: [
+          "Compressed air lines",
+          "Instrumentation air",
+          "Vacuum piping"
+        ]
+      }
+    ]
+  },
+
+  // SWR SYSTEMS
+  {
+    slug: "easyfit-re",
+    name: "Easyfit RE Reclaim Piping",
+    description: "Purple-colored UPVC system for recycled wastewater transportation with UV and fire resistance.",
+    imgUrl: [],
+    tableData: [
+      {
+        size: "15-250mm (½-10\")",
+        class: "SCH 40/80",
+        standard: "ASTM D 1785",
+        endConnection: "Solvent Cement"
+      }
+    ],
+    productSpec: [
+      {
+        key: "FEATURES",
+        value: [
+          "Non-potable water marking",
+          "Lead-free material",
+          "Cost-effective",
+          "Easy identification"
+        ]
+      },
+      {
+        key: "APPLICATIONS",
+        value: [
+          "Greywater recycling",
+          "Landscape irrigation",
+          "Industrial reuse systems"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "silentfit",
+    name: "Silentfit Low Noise SWR",
+    description: "3-layer noise insulated drainage system with UPVC outer/inner layers and sound-dampening middle layer.",
+    imgUrl: [],
+    tableData: [
+      {
+        size: "40-160mm",
+        class: "-",
+        standard: "IS 13592",
+        endConnection: "Rubber Ring"
+      }
+    ],
+    productSpec: [
+      {
+        key: "FEATURES",
+        value: [
+          "30% noise reduction",
+          "Hospital-grade quietness",
+          "Thermal expansion allowance",
+          "Rodent-proof"
+        ]
+      },
+      {
+        key: "APPLICATIONS",
+        value: [
+          "Hospitals",
+          "Luxury residences",
+          "Recording studios"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "ultrafit-swr",
+    name: "Ultrafit SWR Piping",
+    description: "Leak-proof sewerage system with rubber ring joints for long-term sealing performance.",
+    imgUrl: [],
+    tableData: [
+      {
+        size: "40-200mm",
+        class: "Type A/B",
+        standard: "IS 13592",
+        endConnection: "Rubber Ring"
+      }
+    ],
+    productSpec: [
+      {
+        key: "FEATURES",
+        value: [
+          "Lightweight yet strong",
+          "Smooth bore design",
+          "Chemical resistant",
+          "50-year lifespan"
+        ]
+      },
+      {
+        key: "APPLICATIONS",
+        value: [
+          "High-rise buildings",
+          "Industrial drainage",
+          "Stormwater systems"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "rainfit",
+    name: "Rainfit Roofwater Systems",
+    description: "Complete rainwater harvesting solution with half-round and downtake pipes for efficient collection.",
+    imgUrl: [],
+    tableData: [
+      {
+        size: "75-250mm",
+        class: "-",
+        standard: "-",
+        endConnection: "Clamp/Rubber Ring"
+      }
+    ],
+    productSpec: [
+      {
+        key: "FEATURES",
+        value: [
+          "UV stabilized",
+          "High flow capacity",
+          "Aesthetic design",
+          "Corrosion proof"
+        ]
+      },
+      {
+        key: "APPLICATIONS",
+        value: [
+          "Residential rooftops",
+          "Parking sheds",
+          "Industrial roofing"
+        ]
+      }
+    ]
+  },
+
+  // UNDERGROUND
+  {
+    slug: "foamfit",
+    name: "Foamfit Underground Drainage",
+    description: "Multi-layer cellular core pipes offering strength with 50% weight reduction compared to solid wall pipes.",
+    imgUrl: [],
+    tableData: [
+      {
+        size: "110-315mm",
+        class: "SN2/4/8",
+        standard: "IS 16098",
+        endConnection: "Rubber Ring"
+      }
+    ],
+    productSpec: [
+      {
+        key: "FEATURES",
+        value: [
+          "6m lengths available",
+          "Load bearing capacity",
+          "Easy handling",
+          "Joints sealed for 100 years"
+        ]
+      },
+      {
+        key: "APPLICATIONS",
+        value: [
+          "Township projects",
+          "Municipal drainage",
+          "Industrial estates"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "drainfit",
+    name: "Drainfit UPVC Underground",
+    description: "Lightweight alternative to concrete pipes with excellent abrasion resistance for underground use.",
+    imgUrl: [],
+    tableData: [
+      {
+        size: "63-400mm",
+        class: "SN2",
+        standard: "IS 15328",
+        endConnection: "Solvent/Rubber Ring"
+      }
+    ],
+    productSpec: [
+      {
+        key: "FEATURES",
+        value: [
+          "30% lighter than concrete",
+          "Smooth inner surface",
+          "Chemical resistant",
+          "Maintenance-free"
+        ]
+      },
+      {
+        key: "APPLICATIONS",
+        value: [
+          "Road crossings",
+          "Park drainage",
+          "Factory drainage"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "corfit-dwc",
+    name: "Corfit Double Wall Corrugated",
+    description: "HDPE pipes with corrugated exterior for soil movement resistance and smooth interior for flow efficiency.",
+    imgUrl: [],
+    tableData: [
+      {
+        size: "100-1000mm",
+        class: "SNA/SNB",
+        standard: "IS 16098",
+        endConnection: "Rubber Ring"
+      }
+    ],
+    productSpec: [
+      {
+        key: "FEATURES",
+        value: [
+          "Replaces RCC pipes",
+          "Withstands dynamic loads",
+          "Leak-proof joints",
+          "50-year design life"
+        ]
+      },
+      {
+        key: "APPLICATIONS",
+        value: [
+          "Highway drainage",
+          "Airport runways",
+          "Flood control"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "corfit-manhole",
+    name: "Corfit Manhole Chambers",
+    description: "PE material chambers resistant to sulfuric acid and hydrogen sulfide found in sewer environments.",
+    imgUrl: [],
+    tableData: [
+      {
+        size: "315-1000mm",
+        class: "-",
+        standard: "BS EN 13598",
+        endConnection: "Spigot/Socket"
+      }
+    ],
+    productSpec: [
+      {
+        key: "FEATURES",
+        value: [
+          "Chemical resistant",
+          "Abrasion proof",
+          "Lightweight",
+          "Pre-sloped invert"
+        ]
+      },
+      {
+        key: "APPLICATIONS",
+        value: [
+          "Sewage networks",
+          "Stormwater systems",
+          "Industrial drainage"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "durafit",
+    name: "Durafit FRP Covers",
+    description: "Fiberglass manhole covers with 1.5-40 ton load capacity and anti-theft properties.",
+    imgUrl: [],
+    tableData: [
+      {
+        size: "300-1200mm",
+        class: "A15-D400",
+        standard: "BS EN 124",
+        endConnection: "-"
+      }
+    ],
+    productSpec: [
+      {
+        key: "FEATURES",
+        value: [
+          "50% lighter than iron",
+          "Anti-slip surface",
+          "Lockable options",
+          "-40°C to 200°C range"
+        ]
+      },
+      {
+        key: "APPLICATIONS",
+        value: [
+          "Road surfaces",
+          "Pedestrian areas",
+          "Industrial campuses"
+        ]
+      }
+    ]
+  },
+
+  // CABLE PROTECTION
+  {
+    slug: "cablefit",
+    name: "Cablefit Ducting Pipes",
+    description: "HDPE double-wall conduits for telecom and power cables with high impact strength.",
+    imgUrl: [],
+    tableData: [
+      {
+        size: "50-160mm",
+        class: "450N/750N",
+        standard: "IS 16205",
+        endConnection: "Coupler"
+      }
+    ],
+    productSpec: [
+      {
+        key: "FEATURES",
+        value: [
+          "Rodent proof",
+          "UV stabilized",
+          "Smooth inner wall",
+          "6m lengths"
+        ]
+      },
+      {
+        key: "APPLICATIONS",
+        value: [
+          "Fiber optic networks",
+          "Electrical conduits",
+          "Tunnel wiring"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "wirefit",
+    name: "Wirefit Electrical Conduits",
+    description: "UPVC conduit pipes with color-coding for different mechanical stress requirements.",
+    imgUrl: [],
+    tableData: [
+      {
+        size: "20-63mm",
+        class: "LMS/MMS/HMS",
+        standard: "IS 9537",
+        endConnection: "Solvent Cement"
+      }
+    ],
+    productSpec: [
+      {
+        key: "FEATURES",
+        value: [
+          "Fire resistant",
+          "Concrete-tight joints",
+          "Moisture proof",
+          "Color-coded"
+        ]
+      },
+      {
+        key: "APPLICATIONS",
+        value: [
+          "Building wiring",
+          "Industrial cabling",
+          "Outdoor installations"
+        ]
+      }
+    ]
+  },
+
+  // AGRICULTURE
+  {
+    slug: "aquafit",
+    name: "Aquafit Agriculture Pipes",
+    description: "UPVC pressure pipes for irrigation with smooth bore to prevent clogging and ensure high flow.",
+    imgUrl: [],
+    tableData: [
+      {
+        size: "20-400mm",
+        class: "2.5-16kg/cm²",
+        standard: "IS 4985",
+        endConnection: "Solvent Cement"
+      }
+    ],
+    productSpec: [
+      {
+        key: "FEATURES",
+        value: [
+          "Hazen-Williams coefficient 150",
+          "UV stabilized",
+          "Chemical resistant",
+          "30-year lifespan"
+        ]
+      },
+      {
+        key: "APPLICATIONS",
+        value: [
+          "Drip irrigation",
+          "Sprinkler systems",
+          "Farm water supply"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "safefit",
+    name: "Safefit Borewell Systems",
+    description: "Complete borewell solution with screen pipes, casing pipes and rising mains with CIRCLIP locking.",
+    imgUrl: [],
+    tableData: [
+      {
+        size: "25-400mm",
+        class: "V4/Medium/Heavy",
+        standard: "IS 12818",
+        endConnection: "Threaded"
+      }
+    ],
+    productSpec: [
+      {
+        key: "FEATURES",
+        value: [
+          "Color-coded pressure ratings",
+          "Sand screen options",
+          "High tensile strength",
+          "Corrosion proof"
+        ]
+      },
+      {
+        key: "APPLICATIONS",
+        value: [
+          "Agricultural borewells",
+          "Industrial water extraction",
+          "Community water projects"
+        ]
+      }
+    ]
+  },
+  {
+    slug: "pefit-aqua",
+    name: "PEfitAqua HDPE Piping",
+    description: "Flexible HDPE systems for water supply with excellent resistance to ground movements.",
+    imgUrl: [],
+    tableData: [
+      {
+        size: "20-315mm",
+        class: "PE63/80/100",
+        standard: "IS 4984",
+        endConnection: "Butt Fusion"
+      }
+    ],
+    productSpec: [
+      {
+        key: "FEATURES",
+        value: [
+          "Earthquake resistant",
+          "Leak-free joints",
+          "UV stabilized",
+          "50-year design life"
+        ]
+      },
+      {
+        key: "APPLICATIONS",
+        value: [
+          "Rural water supply",
+          "Borewell delivery",
+          "Mining water lines"
+        ]
+      }
+    ]
+  },
+
+  // WATER STORAGE
+  {
+    slug: "storefit",
+    name: "Storefit Water Tanks",
+    description: "3-layer insulated tanks with antimicrobial inner lining and 10-year warranty.",
+    imgUrl: [],
+    tableData: [
+      {
+        size: "500-10,000L",
+        class: "-",
+        standard: "IS 12701",
+        endConnection: "Multiple ports"
+      }
+    ],
+    productSpec: [
+      {
+        key: "FEATURES",
+        value: [
+          "Food grade material",
+          "UV protection cover",
+          "Reinforced ribs",
+          "Threaded lid"
+        ]
+      },
+      {
+        key: "APPLICATIONS",
+        value: [
+          "Residential overhead",
+          "Commercial backup",
+          "Industrial storage"
+        ]
+      }
+    ]
+  },
+
+  // SUB-SURFACE DRAINAGE
+  {
+    slug: "terrafit",
+    name: "Terrafit Sub-Surface Drainage",
+    description: "Perforated corrugated pipes with geo-textile wrap for agricultural and civil drainage applications.",
+    imgUrl: [],
+    tableData: [
+      {
+        size: "80-100mm",
+        class: "-",
+        standard: "IS 9271",
+        endConnection: "Coupler"
+      }
+    ],
+    productSpec: [
+      {
+        key: "FEATURES",
+        value: [
+          "250gsm filter fabric",
+          "Flexible coils (50/100m)",
+          "Rodent resistant",
+          "Chemical inert"
+        ]
+      },
+      {
+        key: "APPLICATIONS",
+        value: [
+          "Farmland drainage",
+          "Golf courses",
+          "Road base drainage"
+        ]
+      }
+    ]
+  }
+];

@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import ProductCard from "../../components/cards/ProductCard";
-import { Cat_1_Products, categories } from "../../utils/data";
+import { Cat_1_Products, categories,AllProducts } from "../../utils/data";
 
 const ProductShowcase = () => {
   const swiperRef = useRef(null);
@@ -89,7 +89,7 @@ const ProductShowcase = () => {
               1024: { slidesPerView: 3.2 },
             }}
           >
-            {products.map((product, idx) => (
+            {AllProducts.map((product, idx) => (
               <SwiperSlide key={idx}>
                 <div className="mb-4">
                   <ProductCard product={product} imageHeight='h-64' />
