@@ -229,7 +229,7 @@ const HeroCarousel = () => {
   );
 
   return (
-    <div className="relative w-full h-[calc(100vh-70px)] overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50 pt-35 sm:pt-1">
+    <div className="relative w-full h-[calc(100vh-70px)] overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50 pt-15 sm:pt-1">
       {/* Main carousel container */}
       <div
         ref={carouselRef}

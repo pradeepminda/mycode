@@ -65,7 +65,7 @@ function Footer() {
                 <LuInstagram className="text-black-500 text-md" />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/@MsMANGRISH"
                 className="bg-white rounded-full p-2 border border-gray-300 hover:border-gray-500 transition duration-300 ease-in-out"
                 aria-label="YouTube"
               >

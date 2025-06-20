@@ -5,12 +5,21 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import ProductCard from "../../components/cards/ProductCard";
-import { Cat_1_Products, categories,AllProducts } from "../../utils/data";
+import { Cat_1_Products, categories, AllProducts } from "../../utils/data";
+import { useNavigate } from "react-router-dom";
 
 const ProductShowcase = () => {
   const swiperRef = useRef(null);
 
-  const [products, setProducts] = useState(Cat_1_Products)
+  const navigate =useNavigate()
+
+  const [products, setProducts] = useState(Cat_1_Products);
+  const allProductsWithCategory = categories.flatMap((category) =>
+    category.products.map((product) => ({
+      ...product,
+      category: category.name,
+    }))
+  );
 
   return (
     <div className="pb-12 px-4 md:px-12 bg-white">
@@ -30,7 +39,9 @@ const ProductShowcase = () => {
             <div
               key={idx}
               className="flex justify-between items-center py-3 border-b border-gray-100 last:border-b-0"
-              onClick={()=>{setProducts(cat?.products ||[])}}
+              onClick={() => {
+                setProducts(cat?.products || []);
+              }}
             >
               <span className="text-[13px] font-medium text-gray-700">
                 {cat.name}
@@ -57,7 +68,7 @@ const ProductShowcase = () => {
             {products.map((product, idx) => (
               <SwiperSlide key={idx}>
                 <div className="mb-4">
-                  <ProductCard product={product} imageHeight='h-64' />
+                  <ProductCard product={product} imageHeight="h-64" />
                 </div>
               </SwiperSlide>
             ))}
@@ -78,40 +89,46 @@ const ProductShowcase = () => {
           </button>
         </div>
       </div>
-       <div className="block md:hidden relative w-full md:w-3/4 pt-6" >
-          <Swiper
-            modules={[Navigation]}
-            onSwiper={(swiper) => (swiperRef.current = swiper)}
-            spaceBetween={20}
-            slidesPerView={1.2}
-            breakpoints={{
-              768: { slidesPerView: 2.2 },
-              1024: { slidesPerView: 3.2 },
-            }}
-          >
-            {AllProducts.map((product, idx) => (
-              <SwiperSlide key={idx}>
-                <div className="mb-4">
-                  <ProductCard product={product} imageHeight='h-64' />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+      <div className="block md:hidden relative w-full md:w-3/4 pt-6">
+        <Swiper
+          modules={[Navigation]}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          spaceBetween={20}
+          slidesPerView={1.2}
+          breakpoints={{
+            768: { slidesPerView: 2.2 },
+            1024: { slidesPerView: 3.2 },
+          }}
+        >
+          {allProductsWithCategory.map((product, idx) => (
+            <SwiperSlide key={idx}>
+              <div className="mb-4">
+                <ProductCard
+                  product={product}
+                  imageHeight="h-64"
+                  onClick={() => {
+                    navigate("/products", {});
+                  }}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-          {/* Navigation Buttons */}
-          <button
-            onClick={() => swiperRef.current?.slidePrev()}
-            className="absolute -left-3 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-800 p-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-20 group backdrop-blur-sm"
-          >
-            <LuChevronLeft className="w-6 h-6 group-hover:scale-110 transition-transform" />
-          </button>
-          <button
-            onClick={() => swiperRef.current?.slideNext()}
-            className="absolute -right-3 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-800 p-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-20 group backdrop-blur-sm"
-          >
-            <LuChevronRight className="w-6 h-6 group-hover:scale-110 transition-transform" />
-          </button>
-        </div>
+        {/* Navigation Buttons */}
+        <button
+          onClick={() => swiperRef.current?.slidePrev()}
+          className="absolute -left-3 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-800 p-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-20 group backdrop-blur-sm"
+        >
+          <LuChevronLeft className="w-6 h-6 group-hover:scale-110 transition-transform" />
+        </button>
+        <button
+          onClick={() => swiperRef.current?.slideNext()}
+          className="absolute -right-3 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-800 p-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-20 group backdrop-blur-sm"
+        >
+          <LuChevronRight className="w-6 h-6 group-hover:scale-110 transition-transform" />
+        </button>
+      </div>
     </div>
   );
 };
