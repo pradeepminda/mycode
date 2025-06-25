@@ -258,9 +258,9 @@ const HeroCarousel = () => {
             transform: `translateX(${-currentSlide * 100 + dragOffset / 10}%)`,
           }}
         >
-          {slides.map((slide, index) => (
+          {slides?.map((slide, index) => (
             <div
-              key={slide.id}
+              key={slide?.id}
               className={`flex-shrink-0 w-full h-full bg-gradient-to-br ${slide.bgColor} relative`}
             >
               <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />
