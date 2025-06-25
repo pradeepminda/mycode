@@ -5,6 +5,8 @@ import HERO_IMG_1 from "../../assets/hero-img-02.png";
 import HERO_corefit_1 from "../../assets/hero-corefit.webp";
 import HERO_corefit_2 from "../../assets/hero-corefit-2.webp";
 
+import Hero_Terafit from "../../assets/mangrishProduct/terrafit-01.png";
+
 import HERO_cablefit from "../../assets/hero-cablefit.webp";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Cat_1_Products } from "../../utils/data";
@@ -40,6 +42,13 @@ const HeroCarousel = () => {
       bgColor: "from-slate-50 via-blue-50 to-slate-100",
     },
    
+    {
+      id: 3,
+      title: "Terrafit Sub-Surface Drainage",
+      description:"Terrafit – Subsurface Drainage Pipes offer an innovative solution to manage excess subsurface water, particularly in agriculture, while also supporting modern infrastructure by helping regulate and stabilize water tables.",
+      image: Hero_Terafit,
+      bgColor: "from-slate-100 via-gray-50 to-slate-50",
+    },
     {
       id: 3,
       title: "Cablefit - HDPE Cable ducting pipes",
@@ -229,7 +238,7 @@ const HeroCarousel = () => {
   );
 
   return (
-    <div className="relative w-full h-[calc(100vh-70px)] overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50 pt-15 sm:pt-1">
+    <div className="relative w-full h-[calc(100vh-110px)] lg:h-[calc(100vh-70px)] overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50 pt-5 sm:pt-1">
       {/* Main carousel container */}
       <div
         ref={carouselRef}
@@ -256,7 +265,7 @@ const HeroCarousel = () => {
             >
               <div className="absolute inset-0 bg-white/10 backdrop-blur-sm" />
 
-              <div className="relative z-10 container mx-auto px-6 h-full flex items-center">
+              <div className="relative z-10 container mx-auto px-6 h-full flex items-start lg:items-center ">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-12 w-full items-center">
                   {/* Content */}
                   <div
@@ -267,7 +276,7 @@ const HeroCarousel = () => {
                     }`}
                   >
                     <div className="mb-4">
-                      <h1 className="text-[14px] lg:text-4xl font-semibold text-[#1A4B7B] leading-tight">
+                      <h1 className="text-[18px] lg:text-4xl font-semibold text-[#1A4B7B] leading-tight">
                         {slide.title.split(" ").map((word, wordIndex) => (
                           <span
                             key={wordIndex}
@@ -285,7 +294,7 @@ const HeroCarousel = () => {
                         ))}
                       </h1>
 
-                      <p className="text-[12px] lg:text-base text-[#1A4B7B] leading-relaxed max-w-2xl mt-3">
+                      <p className="text-[14px] lg:text-base text-[#1A4B7B] leading-relaxed max-w-2xl mt-3">
                         {slide.description}
                       </p>
                     </div>
@@ -313,7 +322,7 @@ const HeroCarousel = () => {
                         ? "opacity-100 translate-x-0"
                         : "opacity-60 translate-x-8"
                     }`}>
-                    <img src={slide.image}  alt="" className="relative w-full h-95 lg:h-[85vh]" />
+                    <img src={slide.image}  alt="" className="relative w-full h-100 lg:h-[85vh]" />
                   </div>
                 </div>
               </div>

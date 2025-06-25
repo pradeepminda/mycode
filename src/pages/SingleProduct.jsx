@@ -158,7 +158,7 @@ function SingleProduct() {
             <div className="mt-2">
               <button
                 onClick={() => navigate(`/contact-us`)}
-                className="w-full lg:w-auto bg-black hover:bg-white-700 text-white font-bold font-medium py-2 px-4 rounded-lg transition-colors"
+                className="w-full lg:w-auto bg-black hover:bg-white-700 text-white text-bold font-medium py-2 px-4 rounded-lg transition-colors"
               >
                 ENQUIRY
               </button>
@@ -269,9 +269,9 @@ function TabContent({ activeTab, setActiveTab, productData }) {
         </h3>
         <div className="bg-white rounded-lg border border-gray-200 p-6">
           <ul className="space-y-3">
-            {productData.productSpec
-              .find((spec) => spec.key === "APPLICATION")
-              .value.map((app, index) => (
+            {productData?.productSpec
+              ?.find((spec) => spec?.key === "APPLICATION")
+              ?.value.map((app, index) => (
                 <li key={index} className="flex items-start">
                   <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                   <span className="text-gray-700">{app}</span>
