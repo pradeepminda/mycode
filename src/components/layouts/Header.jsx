@@ -238,11 +238,13 @@ const Header = ({ activeMenu }) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setShowMegaMenu(false);
       }
-      
+
       // Close mobile menu if clicked outside
-      if (mobileMenuRef.current && 
-          !mobileMenuRef.current.contains(event.target) && 
-          !event.target.closest('button[aria-expanded]')) {
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target) &&
+        !event.target.closest("button[aria-expanded]")
+      ) {
         setIsMenuOpen(false);
       }
     };
@@ -365,7 +367,7 @@ const Header = ({ activeMenu }) => {
                       </div>
 
                       {/* Products Grid Column */}
-                      <div className="lg:col-span-2">
+                      {/* <div className="lg:col-span-2">
                         <h3 className="text-lg font-semibold text-gray-900 mb-4">
                           {categories[activeCategory].name}
                         </h3>
@@ -383,6 +385,29 @@ const Header = ({ activeMenu }) => {
                               />
                             )
                           )}
+                        </div>
+                      </div> */}
+                      {/* Products Grid Column */}
+                      <div className="lg:col-span-2">
+                        <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                          {categories[activeCategory].name}
+                        </h3>
+                        <div className="max-h-[400px] overflow-y-auto pr-2">
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            {categories[activeCategory].products.map(
+                              (product, index) => (
+                                <ProductCard
+                                  key={`${product.title}-${index}`}
+                                  product={product}
+                                  openProduct={(data) => {
+                                    navigate(`/single-product`, {
+                                      state: { productDetails: data || "" },
+                                    });
+                                  }}
+                                />
+                              )
+                            )}
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -447,7 +472,7 @@ const Header = ({ activeMenu }) => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div 
+          <div
             className="lg:hidden py-4 border-t border-gray-200 bg-white"
             ref={mobileMenuRef}
           >
@@ -463,7 +488,7 @@ const Header = ({ activeMenu }) => {
               >
                 Home
               </Link>
-              
+
               <Link
                 to="/products"
                 className={`block px-3 py-2 rounded-md transition-colors duration-200 ${
@@ -475,7 +500,7 @@ const Header = ({ activeMenu }) => {
               >
                 Products
               </Link>
-              
+
               <Link
                 to="/about-us"
                 className={`block px-3 py-2 rounded-md transition-colors duration-200 ${
@@ -487,7 +512,7 @@ const Header = ({ activeMenu }) => {
               >
                 About Us
               </Link>
-              
+
               <Link
                 to="/contact-us"
                 className="sm:hidden block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 shadow-md mt-4"

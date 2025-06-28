@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 const ProductShowcase = () => {
   const swiperRef = useRef(null);
 
-  const navigate =useNavigate()
+  const navigate = useNavigate();
 
   const [products, setProducts] = useState(Cat_1_Products);
   const allProductsWithCategory = categories.flatMap((category) =>
@@ -59,6 +59,10 @@ const ProductShowcase = () => {
             modules={[Navigation]}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             spaceBetween={20}
+            navigation={{
+              prevEl: ".swiper-button-prev",
+              nextEl: ".swiper-button-next",
+            }}
             slidesPerView={1.2}
             breakpoints={{
               768: { slidesPerView: 2.2 },
@@ -75,17 +79,19 @@ const ProductShowcase = () => {
           </Swiper>
 
           {/* Navigation Buttons */}
-          <button
+
+         {products?.length>3&& <button
             onClick={() => swiperRef.current?.slidePrev()}
-            className="absolute -left-3 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-800 p-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-20 group backdrop-blur-sm"
+            className="absolute -left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-800 p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-20 group backdrop-blur-sm"
           >
-            <LuChevronLeft className="w-6 h-6 group-hover:scale-110 transition-transform" />
-          </button>
+            <LuChevronLeft className="swiper-button-prev w-6 h-6 group-hover:scale-110 transition-transform -ml-2" />
+          </button>}
+
           <button
             onClick={() => swiperRef.current?.slideNext()}
-            className="absolute -right-3 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-800 p-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-20 group backdrop-blur-sm"
+            className="absolute -right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-800 p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-20 group backdrop-blur-sm"
           >
-            <LuChevronRight className="w-6 h-6 group-hover:scale-110 transition-transform" />
+            <LuChevronRight className="swiper-button-next w-6 h-6 group-hover:scale-110 transition-transform -mr-2" />
           </button>
         </div>
       </div>

@@ -220,19 +220,19 @@ function TabContent({ activeTab, setActiveTab, productData }) {
           Technical Specifications
         </h3>
         <div className="overflow-x-auto">
-          <table className="min-w-full bg-white border border-gray-200">
+          <table className="min-w-full bg-red border border-gray-200">
             <thead className="bg-gray-50">
               <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-bold-medium  text-gray-500 uppercase tracking-wider">
                   Size (mm)
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-bold-medium  text-gray-500 uppercase tracking-wider">
                   Class
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-bold-medium  text-gray-500 uppercase tracking-wider">
                   Standard
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-bold-medium  text-gray-500 uppercase tracking-wider">
                   End Connection
                 </th>
               </tr>
