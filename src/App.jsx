@@ -9,6 +9,7 @@ import SingleProduct from "./pages/SingleProduct";
 import ProductDetailPage from "./pages/SingleProduct";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import { useEffect } from "react";
+import MangrishPrincePdf from "./pages/MangrishPrincePdf";
 
 const routes = (
   // <Suspense fallback={<p></p>}>
@@ -391,19 +392,23 @@ const routes = (
   //     </ScrollToTop>
   //   </Router>
   // </Suspense>
-   <div>
-      <Router>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/product-details" element={<ProductDetails />} />
-          <Route path="/single-product" element={<ProductDetailPage />} />
-           <Route path="/termsAndConditions" element={<TermsAndConditions />} />
-        </Routes>
-      </Router>
-    </div>
+  <div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/product-details" element={<ProductDetails />} />
+        <Route path="/single-product" element={<ProductDetailPage />} />
+        <Route path="/termsAndConditions" element={<TermsAndConditions />} />
+        <Route
+          path="/mangrish-prince-catalog.pdf"
+          element={<MangrishPrincePdf />}
+        />
+      </Routes>
+    </Router>
+  </div>
 );
 
 function App() {
